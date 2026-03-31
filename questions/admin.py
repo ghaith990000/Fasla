@@ -7,9 +7,9 @@ class AnswerInline(admin.TabularInline):
     extra = 1
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ("id", "text", "category", "difficulty")
+    list_display = ("id", "text_en", "category", "difficulty")
     list_filter = ("category", "difficulty")
-    search_fields = ("text",)
+    search_fields = ("text_en",)
 
     inlines = [AnswerInline]
 
